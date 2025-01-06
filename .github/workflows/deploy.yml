@@ -31,5 +31,5 @@ jobs:
       - name: Build and push Docker Compose images
         run: |
           docker compose build
-          docker tag my-web-app:latest ${{ steps.login-ecr.outputs.registry }}/my-web-app:latest
-          docker push ${{ steps.login-ecr.outputs.registry }}/my-web-app:latest
+          docker tag my-web-app-backend:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/my-web-app:backend-latest
+          docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/my-web-app:backend-latest
