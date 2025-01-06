@@ -1,10 +1,8 @@
-version: '3.8'
-
 services:
   backend:
     build:
       context: ./backend
-    image: "***.dkr.ecr.us-east-1.amazonaws.com/my-web-app:backend-latest"
+    image: "047719655302.dkr.ecr.us-east-1.amazonaws.com/my-web-app:backend-latest"
     environment:
       - DATABASE_URL=postgres://user:password@postgres:5432/mydb
     depends_on:
